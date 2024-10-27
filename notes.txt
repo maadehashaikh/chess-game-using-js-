@@ -1,0 +1,6 @@
+column => vertical portion => files (a,b,c,d,e,f,g,h)
+row => horizontal portion => rank (1,2,3,4,5,6,7,8)
+
+mapping saray moves ko track karny kay liyay zaroori h 
+
+
