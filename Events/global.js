@@ -1,8 +1,8 @@
 import { root_div } from "../Helper/constants.js";
 import { globalState } from "../index.js";
 
-function whitePawnClicked({ piece }) {
-  console.log(piece);
+function whitePawnClicked({ piece_name }) {
+  console.log(piece_name);
 }
 
 function gloablEvent() {
