@@ -120,5 +120,10 @@ function clearHighlight() {
 }
 
 // self highlight function on clicking pawn
-function selfHighlight() {}
-export { initGameRender, renderHighlight, clearHighlight };
+function selfHighlight(piece) {
+  console.log(piece);
+  document
+    .getElementById(piece.current_position)
+    .classList.add("highlightYellow");
+}
+export { initGameRender, renderHighlight, clearHighlight, selfHighlight };
