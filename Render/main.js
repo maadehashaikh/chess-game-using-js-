@@ -1,6 +1,7 @@
 // import { blackPawn } from "../Data/pieces.js";
 import * as piece from "../Data/pieces.js";
 import { root_div } from "../Helper/constants.js";
+import { globalState } from "../index.js";
 
 // use when we have to render the pieces of chess on board
 function pieceRender(data) {
@@ -100,4 +101,24 @@ function initGameRender(data) {
   pieceRender(data);
 }
 
-export { initGameRender };
+//render highlight circle in js
+function renderHighlight(squareId) {
+  const highlightSpan = document.createElement("span");
+  highlightSpan.classList.add("highlight");
+  document.getElementById(squareId).appendChild(highlightSpan);
+}
+
+// clear all highlights
+function clearHighlight() {
+  const flatData = globalState.flat();
+  flatData.forEach((el) => {
+    if (el.highlighted) {
+      document.getElementById(el.id).innerHTML = "";
+      el.highlighted = false;
+    }
+  });
+}
+
+// self highlight function on clicking pawn
+function selfHighlight() {}
+export { initGameRender, renderHighlight, clearHighlight };

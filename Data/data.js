@@ -1,12 +1,22 @@
+import { renderHighlight } from "../Render/main.js";
+
 export function Greek() {
   alert("Hello World");
 }
 
 function Square(color, id, piece) {
+  const highlight = function () {
+    renderHighlight(this.id);
+    this.highlighted = true;
+  };
+
+  const dehighlight = function () {};
+
   return {
     color,
     id,
     piece,
+    highlight,
   };
 }
 
